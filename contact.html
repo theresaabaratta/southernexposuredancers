@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now | Southern Exposure Dancers — Virginia Beach</title>
+  <meta name="description" content="Book Southern Exposure Dancers for your bachelorette party, birthday, or girls' night out in Virginia Beach and Hampton Roads. Submit your request and we'll be in touch." />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold:  #c9a84c;
+      --gold2: #e8c96e;
+      --black: #0a0a0a;
+      --dark:  #111111;
+      --dark2: #1a1a1a;
+      --mid:   #252525;
+      --mid2:  #2e2e2e;
+      --light: #f0e8d8;
+      --muted: #888;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--light);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav.navbar {
+      background: rgba(10,10,10,0.97);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--gold) !important;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+    .navbar-brand span { font-style: italic; color: var(--light); }
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted) !important;
+      transition: color 0.3s;
+      padding: 0.4rem 1rem !important;
+    }
+    .nav-link:hover,
+    .nav-link.active { color: var(--gold) !important; }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: var(--dark);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: 'BOOK';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 700;
+      color: rgba(201,168,76,0.04);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+    .page-header .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-header h1 em { color: var(--gold); font-style: italic; }
+    .page-header p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: rgba(240,232,216,0.7);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .divider-gold {
+      display: block;
+      width: 50px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.2rem auto;
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      padding: 5rem 0 6rem;
+      background: var(--black);
+    }
+
+    /* ── FORM CARD ── */
+    .form-card {
+      background: var(--dark);
+      border: 1px solid rgba(201,168,76,0.18);
+      padding: 3rem 3rem 3.5rem;
+      position: relative;
+    }
+    .form-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    /* ── FORM ELEMENTS ── */
+    .form-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .form-control,
+    .form-select {
+      background: var(--mid) !important;
+      border: 1px solid rgba(201,168,76,0.2) !important;
+      border-radius: 0 !important;
+      color: var(--light) !important;
+      font-family: 'Cormorant Garamond', serif !important;
+      font-size: 1.05rem !important;
+      padding: 0.75rem 1rem !important;
+      transition: border-color 0.3s, background 0.3s !important;
+    }
+    .form-control::placeholder { color: rgba(136,136,136,0.6) !important; }
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--gold) !important;
+      background: var(--mid2) !important;
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.08) !important;
+      outline: none !important;
+    }
+    .form-select option {
+      background: var(--mid);
+      color: var(--light);
+    }
+    textarea.form-control { resize: vertical; min-height: 130px; }
+
+    /* Field group rule */
+    .field-rule {
+      border: none;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      margin: 2rem 0;
+    }
+
+    /* Section heading inside form */
+    .form-section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: rgba(240,232,216,0.5);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ── CHARACTER COUNTER ── */
+    .char-count {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-align: right;
+      margin-top: 0.3rem;
+    }
+
+    /* ── SUBMIT BTN ── */
+    .btn-submit {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      padding: 1rem 2.8rem;
+      border-radius: 0;
+      transition: background 0.3s, transform 0.2s;
+      cursor: pointer;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+    .btn-submit:disabled {
+      background: var(--mid);
+      color: var(--muted);
+      transform: none;
+      cursor: not-allowed;
+    }
+
+    /* ── SUCCESS STATE ── */
+    .success-panel {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    .success-panel .check-icon {
+      width: 64px;
+      height: 64px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.4rem;
+      color: var(--gold);
+    }
+    .success-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .success-panel p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: rgba(240,232,216,0.7);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    /* ── ASIDE NOTES ── */
+    .aside-note {
+      background: var(--mid);
+      border-left: 3px solid var(--gold);
+      padding: 1.5rem 1.5rem 1.5rem 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+    .aside-note p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: rgba(240,232,216,0.72);
+      margin: 0;
+      line-height: 1.7;
+    }
+    .aside-note .note-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,168,76,0.12);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+    }
+    footer p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin: 0.4rem 0;
+    }
+    .footer-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.7rem;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .gold-rule {
+      border: none;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      margin: 1.2rem auto;
+      width: 50px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.8s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+
+    @media (max-width: 768px) {
+      .form-card { padding: 2rem 1.5rem 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Southern <span>Exposure</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="color:var(--gold);">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Entertainment</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Our Dancers</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#areas">Service Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <p class="eyebrow">Virginia Beach &bull; Hampton Roads</p>
+    <h1>Book <em>Southern Exposure</em><br />Dancers</h1>
+    <span class="divider-gold"></span>
+    <p>Fill out the form below and we'll get back to you to confirm your booking.</p>
+  </div>
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <!-- ASIDE -->
+        <div class="col-lg-3 mb-5 mb-lg-0 fade-up delay-1">
+          <div class="aside-note">
+            <div class="note-label">Response Time</div>
+            <p>We typically respond within a few hours. Weekend inquiries may take until the following morning.</p>
+          </div>
+          <div class="aside-note">
+            <div class="note-label">Booking Window</div>
+            <p>Book at least 48–72 hours in advance for best availability, especially on weekends and holidays.</p>
+          </div>
+          <div class="aside-note">
+            <div class="note-label">Venues We Serve</div>
+            <p>Private residences, hotel suites, vacation rentals, Airbnbs, and other private venues throughout Hampton Roads.</p>
+          </div>
+          <div class="aside-note">
+            <div class="note-label">Adults Only</div>
+            <p>All events are for adults 21+ only. All entertainers are professional adults 18+.</p>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="col-lg-8 fade-up delay-2">
+          <div class="form-card">
+
+            <!-- SUCCESS STATE -->
+            <div class="success-panel" id="successPanel">
+              <div class="check-icon"><i class="fas fa-check"></i></div>
+              <h3>Request Received!</h3>
+              <p>Thanks for reaching out. We'll review your booking request and get back to you shortly to confirm the details.</p>
+            </div>
+
+            <!-- FORM -->
+            <div id="bookingForm">
+
+              <p class="form-section-heading">Your Information</p>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="firstName">First Name <span style="color:#c9a84c">*</span></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Jane" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="lastName">Last Name <span style="color:#c9a84c">*</span></label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Smith" required />
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email Address <span style="color:#c9a84c">*</span></label>
+                  <input type="email" class="form-control" id="email" placeholder="jane@email.com" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="phone">Phone Number <span style="color:#c9a84c">*</span></label>
+                  <input type="tel" class="form-control" id="phone" placeholder="(757) 000-0000" required />
+                </div>
+              </div>
+
+              <hr class="field-rule" />
+              <p class="form-section-heading">Event Details</p>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="eventType">Type of Event <span style="color:#c9a84c">*</span></label>
+                  <select class="form-select" id="eventType" required>
+                    <option value="" disabled selected>Select event type…</option>
+                    <option>Bachelorette Party</option>
+                    <option>Birthday Party</option>
+                    <option>Girls' Night Out</option>
+                    <option>Divorce Party</option>
+                    <option>Holiday Party</option>
+                    <option>Other Private Event</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="guestCount">Approximate Guest Count <span style="color:#c9a84c">*</span></label>
+                  <select class="form-select" id="guestCount" required>
+                    <option value="" disabled selected>Select size…</option>
+                    <option>1–5 guests</option>
+                    <option>6–10 guests</option>
+                    <option>11–20 guests</option>
+                    <option>21–30 guests</option>
+                    <option>30+ guests</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="eventDate">Preferred Event Date <span style="color:#c9a84c">*</span></label>
+                  <input type="date" class="form-control" id="eventDate" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="eventTime">Preferred Start Time</label>
+                  <select class="form-select" id="eventTime">
+                    <option value="" disabled selected>Select a time…</option>
+                    <option>6:00 PM</option>
+                    <option>7:00 PM</option>
+                    <option>8:00 PM</option>
+                    <option>9:00 PM</option>
+                    <option>10:00 PM</option>
+                    <option>11:00 PM</option>
+                    <option>Midnight or later</option>
+                    <option>Flexible / Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr class="field-rule" />
+              <p class="form-section-heading">Venue &amp; Location</p>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="venueType">Venue Type</label>
+                  <select class="form-select" id="venueType">
+                    <option value="" disabled selected>Select venue type…</option>
+                    <option>Private Residence</option>
+                    <option>Hotel Suite</option>
+                    <option>Vacation Rental / Airbnb</option>
+                    <option>Party Bus / Limo</option>
+                    <option>Other Private Venue</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="city">City / Area <span style="color:#c9a84c">*</span></label>
+                  <select class="form-select" id="city" required>
+                    <option value="" disabled selected>Select your area…</option>
+                    <option>Virginia Beach Oceanfront</option>
+                    <option>Virginia Beach (other)</option>
+                    <option>Norfolk</option>
+                    <option>Chesapeake</option>
+                    <option>Hampton</option>
+                    <option>Newport News</option>
+                    <option>Portsmouth</option>
+                    <option>Suffolk</option>
+                    <option>Williamsburg</option>
+                    <option>Outer Banks, NC</option>
+                    <option>Other (specify in notes)</option>
+                  </select>
+                </div>
+              </div>
+
+              <hr class="field-rule" />
+              <p class="form-section-heading">Anything Else?</p>
+
+              <div class="mb-1">
+                <label class="form-label" for="notes">Special Requests or Notes</label>
+                <textarea class="form-control" id="notes" maxlength="600" placeholder="Tell us anything that would help us make your night perfect — themes, music preferences, special surprises, etc."></textarea>
+                <div class="char-count"><span id="charCount">0</span> / 600 characters</div>
+              </div>
+
+              <div class="mt-4">
+                <p style="font-family:'Montserrat',sans-serif;font-size:0.62rem;letter-spacing:0.12em;color:var(--muted);margin-bottom:1.2rem;">
+                  Fields marked <span style="color:var(--gold)">*</span> are required. All inquiries are kept private and confidential.
+                </p>
+                <button type="button" class="btn-submit" id="submitBtn" onclick="handleSubmit()">
+                  <i class="fas fa-paper-plane me-2"></i> Submit Booking Request
+                </button>
+              </div>
+
+            </div><!-- /bookingForm -->
+          </div><!-- /form-card -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand mb-2">Southern Exposure Dancers</div>
+      <p>Virginia Beach's Premier Female Entertainment | Hampton Roads</p>
+      <hr class="gold-rule" />
+      <div class="footer-links mb-3">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#areas">Areas</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html">Book Now</a>
+      </div>
+      <p style="font-size:0.6rem;opacity:0.45;">&copy; 2025 SouthernExposureDancers.com &mdash; All entertainers are professional adults 18+. Entertainment for adults 21+ only.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Character counter
+    const notesField = document.getElementById('notes');
+    const charCount  = document.getElementById('charCount');
+    notesField.addEventListener('input', () => {
+      charCount.textContent = notesField.value.length;
+    });
+
+    // Set min date to today
+    const dateField = document.getElementById('eventDate');
+    const today = new Date().toISOString().split('T')[0];
+    dateField.setAttribute('min', today);
+
+    // Form validation + submit handler
+    function handleSubmit() {
+      const required = ['firstName', 'lastName', 'email', 'phone', 'eventType', 'guestCount', 'eventDate', 'city'];
+      let valid = true;
+
+      required.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) {
+          el.style.borderColor = 'rgba(220,80,80,0.7)';
+          valid = false;
+        } else {
+          el.style.borderColor = 'rgba(201,168,76,0.2)';
+        }
+      });
+
+      // Basic email check
+      const email = document.getElementById('email').value;
+      if (valid && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById('email').style.borderColor = 'rgba(220,80,80,0.7)';
+        valid = false;
+      }
+
+      if (!valid) {
+        // Scroll to first error
+        const firstError = document.querySelector('[style*="rgb(220, 80, 80)"]');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Disable button, show loading
+      const btn = document.getElementById('submitBtn');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Sending…';
+
+      // Simulate submission delay then show success
+      setTimeout(() => {
+        document.getElementById('bookingForm').style.display = 'none';
+        const panel = document.getElementById('successPanel');
+        panel.style.display = 'block';
+        panel.style.animation = 'fadeUp 0.7s ease both';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1200);
+    }
+
+    // Live border reset on change
+    document.querySelectorAll('.form-control, .form-select').forEach(el => {
+      el.addEventListener('input', () => {
+        el.style.borderColor = 'rgba(201,168,76,0.2)';
+      });
+    });
+  </script>
+</body>
+</html>

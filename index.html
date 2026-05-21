@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Southern Exposure Dancers | Party Strippers Virginia Beach</title>
+  <meta name="description" content="Southern Exposure Dancers brings Virginia Beach's hottest party entertainment. Sexy, professional female dancers for bachelorette parties, birthday parties, and girls' nights out across the Hampton Roads area." />
+  <meta name="keywords" content="party strippers Virginia Beach, female strippers Virginia Beach, bachelorette party dancers Virginia Beach, adult entertainment Virginia Beach, Hampton Roads party entertainment" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --gold:   #c9a84c;
+      --gold2:  #e8c96e;
+      --black:  #0a0a0a;
+      --dark:   #111111;
+      --dark2:  #1a1a1a;
+      --mid:    #252525;
+      --light:  #f0e8d8;
+      --muted:  #888;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--light);
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* ── NAV ── */
+    nav.navbar {
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      backdrop-filter: blur(8px);
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--gold) !important;
+      letter-spacing: 0.05em;
+    }
+    .navbar-brand span {
+      font-style: italic;
+      color: var(--light);
+    }
+    .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted) !important;
+      transition: color 0.3s;
+      padding: 0.4rem 1rem !important;
+    }
+    .nav-link:hover { color: var(--gold) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.38;
+      filter: saturate(0.7) contrast(1.1);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(10,10,10,0.85) 0%,
+        rgba(10,10,10,0.5) 50%,
+        rgba(10,10,10,0.8) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+    }
+    .hero-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--light);
+      opacity: 0.85;
+      max-width: 520px;
+      margin-bottom: 2.2rem;
+    }
+    .divider-gold {
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem 0;
+    }
+    .btn-gold {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--gold);
+      border: none;
+      padding: 0.9rem 2.2rem;
+      transition: background 0.3s, transform 0.2s;
+      border-radius: 0;
+    }
+    .btn-gold:hover {
+      background: var(--gold2);
+      color: var(--black);
+      transform: translateY(-2px);
+    }
+    .btn-outline-gold {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: transparent;
+      border: 1px solid var(--gold);
+      padding: 0.9rem 2.2rem;
+      transition: all 0.3s;
+      border-radius: 0;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-outline-gold:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── SECTION COMMON ── */
+    section { padding: 6rem 0; }
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { color: var(--gold); font-style: italic; }
+    .section-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: rgba(240,232,216,0.78);
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    /* ── INTRO / ABOUT ── */
+    #about { background: var(--dark); }
+    .intro-card {
+      background: var(--mid);
+      border: 1px solid rgba(201,168,76,0.15);
+      padding: 2.5rem;
+      position: relative;
+    }
+    .intro-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--gold);
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--black); }
+    .service-item {
+      border-top: 1px solid rgba(201,168,76,0.2);
+      padding: 2rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      transition: background 0.3s;
+    }
+    .service-item:last-child { border-bottom: 1px solid rgba(201,168,76,0.2); }
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: rgba(201,168,76,0.2);
+      line-height: 1;
+      min-width: 55px;
+    }
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    /* ── PHOTO SECTION ── */
+    #gallery { background: var(--dark2); }
+    .dancer-photo-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .dancer-photo-wrap::before {
+      content: '';
+      position: absolute;
+      top: 16px; left: 16px;
+      right: -16px; bottom: -16px;
+      border: 1px solid rgba(201,168,76,0.35);
+      z-index: 0;
+    }
+    .dancer-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      height: 580px;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: saturate(0.8) contrast(1.05);
+    }
+    .photo-caption {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 1rem;
+      opacity: 0.7;
+    }
+
+    /* ── AREAS ── */
+    #areas { background: var(--black); }
+    .areas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.5rem;
+    }
+    .area-tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.35);
+      padding: 0.45rem 1rem;
+      background: transparent;
+      transition: all 0.3s;
+    }
+    .area-tag:hover { background: rgba(201,168,76,0.08); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--dark); }
+    .accordion-item {
+      background: var(--mid) !important;
+      border: 1px solid rgba(201,168,76,0.15) !important;
+      margin-bottom: 0.5rem;
+      border-radius: 0 !important;
+    }
+    .accordion-button {
+      background: var(--mid) !important;
+      color: var(--light) !important;
+      font-family: 'Playfair Display', serif !important;
+      font-size: 1.1rem !important;
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) {
+      color: var(--gold) !important;
+    }
+    .accordion-button::after {
+      filter: invert(1) sepia(1) saturate(2) hue-rotate(5deg);
+    }
+    .accordion-body {
+      background: var(--mid);
+      color: rgba(240,232,216,0.75);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem;
+      line-height: 1.85;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #1a1400 0%, #111 50%, #1a1400 100%);
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .cta-banner p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: rgba(240,232,216,0.7);
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(201,168,76,0.12);
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    footer .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+    }
+    footer p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin: 0.5rem 0;
+    }
+    .footer-links a {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.8rem;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .gold-rule {
+      border: none;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      margin: 1.5rem auto;
+      width: 60px;
+    }
+
+    /* ── UTILS ── */
+    .text-gold { color: var(--gold) !important; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.9s ease both; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+    .delay-4 { animation-delay: 0.6s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .dancer-photo { height: 380px; }
+      .hero { min-height: 90vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Southern <span>Exposure</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" style="color:var(--gold);">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Entertainment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Our Dancers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#areas">Service Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=1600&q=80&fit=crop"
+      alt="Female entertainer dancer on stage Virginia Beach"
+    />
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content fade-up">
+        <p class="hero-eyebrow">Virginia Beach &bull; Hampton Roads &bull; Norfolk</p>
+        <h1>Virginia Beach's<br /><em>Premier Party</em><br />Entertainers</h1>
+        <span class="divider-gold"></span>
+        <p class="hero-sub delay-1 fade-up">
+          Southern Exposure Dancers brings the heat to bachelorette parties, birthday bashes, and girls' nights out across the Virginia Beach area — professional, stunning, and unforgettable.
+        </p>
+        <div class="d-flex flex-wrap gap-3 delay-2 fade-up">
+          <a href="#services" class="btn-gold">Explore Entertainment</a>
+          <a href="#areas" class="btn-outline-gold">Our Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5">
+          <p class="section-label">Virginia Beach Adult Entertainment</p>
+          <h2 class="section-title">Where Southern Charm<br />Meets <em>Sizzling</em> Entertainment</h2>
+          <span class="divider-gold"></span>
+        </div>
+        <div class="col-lg-7">
+          <div class="intro-card">
+            <p class="section-body mb-3">
+              Southern Exposure Dancers is Virginia Beach's most talked-about source for private party entertainment. Whether you're planning a wild bachelorette night, celebrating a birthday, or throwing an epic girls' night — our gorgeous, professional female entertainers know how to turn any gathering into a night nobody forgets.
+            </p>
+            <p class="section-body mb-3">
+              We serve Virginia Beach and the greater Hampton Roads region — including Norfolk, Chesapeake, Virginia Beach Oceanfront, and surrounding communities. Our dancers are experienced, personable, and bring an electric energy that sets the tone for an unforgettable celebration.
+            </p>
+            <p class="section-body">
+              Every performance is tailored to your group's vibe — playful and flirty or bold and show-stopping. Southern Exposure brings the party to you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-6">
+          <p class="section-label">What We Offer</p>
+          <h2 class="section-title">Party Entertainment<br /><em>Built for the Night</em></h2>
+          <span class="divider-gold"></span>
+          <p class="section-body">
+            From intimate gatherings to full-blown bachelorette extravaganzas, our female entertainers deliver the show Virginia Beach parties demand. Here's what we bring to your event.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+
+          <div class="service-item">
+            <div class="service-num">01</div>
+            <div>
+              <div class="service-title">Bachelorette Party Strippers Virginia Beach</div>
+              <p class="section-body mb-0">The ultimate send-off for the bride-to-be. Our female entertainers specialize in bachelorette parties — bringing the perfect blend of sexy, fun, and celebratory energy to your last night of freedom in Virginia Beach.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">02</div>
+            <div>
+              <div class="service-title">Birthday Party Dancers &amp; Strippers</div>
+              <p class="section-body mb-0">Make her birthday unforgettable. Whether it's a milestone birthday or just an excuse to celebrate, Southern Exposure delivers the kind of entertainment that gets talked about for years.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">03</div>
+            <div>
+              <div class="service-title">Girls' Night Out Entertainment</div>
+              <p class="section-body mb-0">Planning a girls' night in Virginia Beach or the surrounding area? Our dancers bring the nightclub energy straight to your venue, hotel suite, or private residence — no cover charge required.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">04</div>
+            <div>
+              <div class="service-title">Private Party Performances</div>
+              <p class="section-body mb-0">From house parties to vacation rentals along the Oceanfront, we come to you. Our private party strippers in Virginia Beach are fully mobile and ready to turn any space into the hottest venue in town.</p>
+            </div>
+          </div>
+
+          <div class="service-item">
+            <div class="service-num">05</div>
+            <div>
+              <div class="service-title">Divorce &amp; Milestone Celebration Parties</div>
+              <p class="section-body mb-0">Not every celebration needs a reason — and sometimes the best reason is moving forward. Our entertainers know how to help a group let loose and celebrate whatever milestone deserves it.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DANCER PHOTO -->
+  <section id="gallery">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-5 text-center text-lg-start">
+          <div class="dancer-photo-wrap">
+            <img
+              class="dancer-photo"
+              src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&q=80&fit=crop&crop=top"
+              alt="Professional female entertainer dancer Southern Exposure Virginia Beach"
+            />
+          </div>
+          <p class="photo-caption">Southern Exposure Dancers — Virginia Beach, VA</p>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <p class="section-label">Our Entertainers</p>
+          <h2 class="section-title">Stunning. Professional.<br /><em>Unforgettable.</em></h2>
+          <span class="divider-gold"></span>
+          <p class="section-body mb-3">
+            Southern Exposure Dancers are hand-selected for their beauty, confidence, and ability to read a crowd. Whether your group wants playful and flirty or a full high-energy show, our dancers deliver exactly what the night calls for.
+          </p>
+          <p class="section-body mb-3">
+            Every dancer is experienced in private party performance — professional, on time, and guaranteed to make your event the one everyone talks about. We take pride in creating a safe, fun atmosphere where your group feels comfortable letting loose.
+          </p>
+          <p class="section-body mb-4">
+            Virginia Beach has no shortage of nightlife, but nothing beats having the entertainment come directly to your celebration — on your terms, in your space, at your pace.
+          </p>
+          <a href="#faq" class="btn-outline-gold">Read the FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREAS -->
+  <section id="areas">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7">
+          <p class="section-label">Where We Perform</p>
+          <h2 class="section-title">Serving Virginia Beach &amp;<br /><em>All of Hampton Roads</em></h2>
+          <span class="divider-gold"></span>
+          <p class="section-body">
+            Southern Exposure Dancers provides private party entertainment throughout the Hampton Roads region. No matter where your celebration is happening, we'll bring the show to you. Party strippers in Virginia Beach are just the beginning — we travel across the entire area.
+          </p>
+          <div class="areas-grid">
+            <span class="area-tag">Virginia Beach Oceanfront</span>
+            <span class="area-tag">Norfolk</span>
+            <span class="area-tag">Chesapeake</span>
+            <span class="area-tag">Hampton</span>
+            <span class="area-tag">Newport News</span>
+            <span class="area-tag">Portsmouth</span>
+            <span class="area-tag">Suffolk</span>
+            <span class="area-tag">Great Bridge</span>
+            <span class="area-tag">Kempsville</span>
+            <span class="area-tag">Indian River</span>
+            <span class="area-tag">Princess Anne</span>
+            <span class="area-tag">Sandbridge</span>
+            <span class="area-tag">Smithfield</span>
+            <span class="area-tag">Williamsburg</span>
+            <span class="area-tag">Outer Banks, NC</span>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-1 d-flex align-items-center mt-5 mt-lg-0">
+          <div class="intro-card w-100">
+            <p class="section-label mb-3">Quick Booking Tips</p>
+            <p class="section-body mb-3">
+              <i class="fas fa-check text-gold me-2"></i> Book at least <strong style="color:var(--light)">48–72 hours</strong> in advance for best availability.
+            </p>
+            <p class="section-body mb-3">
+              <i class="fas fa-check text-gold me-2"></i> We perform at <strong style="color:var(--light)">private residences, vacation rentals, hotel suites</strong>, and more.
+            </p>
+            <p class="section-body mb-3">
+              <i class="fas fa-check text-gold me-2"></i> Party sizes from intimate gatherings to <strong style="color:var(--light)">large group events</strong>.
+            </p>
+            <p class="section-body mb-0">
+              <i class="fas fa-check text-gold me-2"></i> Available <strong style="color:var(--light)">7 days a week</strong>, including holidays.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="section-label text-center">Common Questions</p>
+          <h2 class="section-title text-center">Party Stripper FAQ —<br /><em>Virginia Beach</em></h2>
+          <span class="divider-gold d-block mx-auto mb-5"></span>
+
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What areas do your party strippers serve in Virginia Beach?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We provide entertainment throughout Virginia Beach and the broader Hampton Roads area — including the Oceanfront, Norfolk, Chesapeake, Hampton, Newport News, Portsmouth, and even as far as Williamsburg and the Outer Banks. If you're not sure whether we cover your location, just reach out and we'll let you know.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  What types of events do you perform at?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Our female entertainers perform at bachelorette parties, birthday parties, girls' nights out, divorce parties, holiday parties, and general private celebrations. We cater to all-female group events and mixed adult parties throughout Virginia Beach.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  What venues can you perform at in Virginia Beach?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We perform at private residences, vacation rental homes, hotel suites, Airbnbs, and other private venues throughout the Virginia Beach area. We bring the entertainment directly to your space — you don't need to go anywhere.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  How far in advance should we book party strippers in Virginia Beach?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We recommend booking at least 48–72 hours in advance to ensure dancer availability, especially on weekends and holiday weekends when Virginia Beach sees heavy traffic. However, we do our best to accommodate last-minute requests when possible.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                  Are your entertainers professional and experienced?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely. Southern Exposure Dancers are experienced private party entertainers who take professionalism seriously. They arrive on time, dressed to impress, and know how to create an electric, fun atmosphere that keeps your group energized and entertained all night long.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                  Is this a safe environment? What should we expect?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes. Our dancers are professional entertainers who maintain clear boundaries and operate in a fun, respectful environment. We want every guest to feel comfortable and have an amazing time. Performances are tailored to the group's comfort level and energy.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to Book the <em style="color:var(--gold);font-style:italic;">Best Party</em> in Virginia Beach?</h2>
+      <p>Southern Exposure Dancers serves all of Hampton Roads. Bachelorette parties, birthdays, girls' nights — we bring the show to you.</p>
+      <a href="#about" class="btn-gold">Learn More About Us</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="brand mb-2">Southern Exposure Dancers</div>
+      <p>Virginia Beach's Premier Female Entertainment | Hampton Roads</p>
+      <hr class="gold-rule" />
+      <div class="footer-links mb-3">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <p style="font-size:0.62rem; opacity:0.5;">
+        &copy; 2025 SouthernExposureDancers.com &mdash; All entertainers are professional adults 18+. Entertainment for adults 21+ only.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Subtle scroll-based nav opacity
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav.navbar');
+      nav.style.background = window.scrollY > 60
+        ? 'rgba(10,10,10,0.98)'
+        : 'rgba(10,10,10,0.95)';
+    });
+  </script>
+</body>
+</html>
